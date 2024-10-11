@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div><h1>Our Products</h1><br></div>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="media/product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of product 1</p>
+            <p>Price: $50</p>
+            <input type="number" id="product1-qty" min="0" placeholder="Quantity">
+        </div>
+        <!-- Repeat for other products -->
+    </div>
+
+    <div class="actions">
+        <button id="checkout-btn">CheckOut</button>
+        <button id="cancel-btn">Cancel</button>
+        <button id="exit-btn">Exit</button>
+    </div>
+
+    <script src="products.js"></script>
+</body>
+</html>
