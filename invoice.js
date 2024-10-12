@@ -46,7 +46,7 @@ document.getElementById('cancel-btn').addEventListener('click', () => {
 });
 
 document.getElementById('exit-btn').addEventListener('click', () => {
-    window.location.href = 'index.html'; // Redirect to home page
+    window.location.href = 'products.html'; // Redirect to home page
 });
 
 // Load the invoice when the page loads

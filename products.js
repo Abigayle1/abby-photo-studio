@@ -1,7 +1,10 @@
 
 const products = [
-    { id: 'product1', name: 'Product 1', price: 50, quantity: 0 },
-    { id: 'product2', name: 'Product 2', price: 30, quantity: 0 },
+    { id: 'product1', name: 'Product 1', price: 70, quantity: 15 },
+    { id: 'product2', name: 'Product 2', price: 90, quantity: 20 },
+    { id: 'product3', name: 'Product 3', price: 60, quantity: 10 },
+    { id: 'product4', name: 'Product 4', price: 40, quantity: 5 },
+    { id: 'product5', name: 'Product 5', price: 20, quantity: 10 },
     // Add more products here
 ];
 
@@ -49,4 +52,11 @@ document.getElementById('cancel-btn').addEventListener('click', () => {
 
 document.getElementById('exit-btn').addEventListener('click', () => {
     window.location.href = 'products.html'; // Redirect to homepage
+});
+
+// Logout button functionality
+document.getElementById('logout-btn').addEventListener('click', () => {
+    // Perform logout logic here (e.g., clear user session, cookies, etc.)
+    alert('You have logged out successfully.');
+    window.location.href = 'login.html'; // Redirect to the login page
 });

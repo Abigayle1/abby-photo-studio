@@ -1,19 +1,49 @@
+/* Add the dark background with the image */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-image: url('media/background.png'); /* Path to the background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+    color: #f5ba31; /* Gold text color */
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Login container styling */
 .login-container {
-    background-color: #fff;
+    background-color: rgba(245, 245, 245, 0.9); /* Semi-transparent background for floating effect */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     width: 350px;
     text-align: center;
+    color: #333;
 }
 
 input {
@@ -22,10 +52,12 @@ input {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #fff;
+    color: #333;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #f5ba31;
     color: white;
     padding: 10px;
     border: none;
@@ -34,69 +66,73 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #e5a821;
 }
 
 #error-message {
     color: red;
 }
 
-/* products.html*/
-
-
+/* Products Grid Styling */
 .products-grid {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
+    display: flex; /* Use flexbox for responsiveness */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center align items */
+    padding: 80px 20px 20px; /* Outer padding and space for the navbar */
 }
 
+/* Individual Product Card Styling */
 .product-card {
     background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center content */
+    margin: 10px; /* Add margin between cards */
+    flex: 1 1 200px; /* Allow cards to grow and shrink, with a minimum width */
+    max-width: 250px; /* Maximum width for each card */
 }
 
 .product-card img {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
+    width: 100%; /* Responsive image width */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Crop to fit */
+    border-radius: 8px; /* Rounded corners for images */
 }
 
+/* Actions Styling */
 .actions {
     margin-top: 20px;
+    text-align: center;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #4CAF50;
+    background-color: #f5ba31; /* Gold color for buttons */
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #e5a821;
 }
 
+/* Responsive layout */
 @media (max-width: 600px) {
     .products-grid {
-        grid-template-columns: 1fr;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .product-card {
+        flex: 1 1 100%; /* Stack cards on smaller screens */
+        max-width: none; /* Remove max width */
     }
 }
-/*Invoice */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
 
+/* Invoice */
 .invoice-container {
     background-color: white;
     padding: 20px;
@@ -144,4 +180,56 @@ button:hover {
 /* Unique CSS rule: Shadow effect for buttons */
 button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Error Page */
+.error-container {
+    background-color: rgba(245, 245, 245, 0.9); /* Semi-transparent background for floating effect */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    color: #333;
+    margin-top: 100px; /* Center below the navbar */
+}
+
+/* Styles for About Us Page */
+.about-container {
+    background-color: rgba(245, 245, 245, 0.9); /* Semi-transparent background for floating effect */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: left; /* Align text to the left */
+    margin: 100px auto; /* Center the container */
+}
+
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Link styles for mailto */
+.about-container a {
+    color: #f5ba31; /* Gold text color for links */
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.about-image {
+    width: 100%; /* Makes the image responsive */
+    max-width: 300px; /* Sets a max width for the image */
+    border-radius: 8px; /* Adds rounded corners */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-details {
+    text-align: left; /* Align text to the left */
 }
