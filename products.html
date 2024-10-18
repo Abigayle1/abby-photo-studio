@@ -4,60 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products-styles.css">
 </head>
 <body>
     <!-- Navbar Section -->
-    <div class="navbar">
-        <h1>Our Products</h1>
-    </div>
 
-    <div class="products-grid">
+    <div class="title" style="padding-bottom: 20px;">
+        <h1 >Our Products</h1>
+        </div>
+        
+    </div>
+    <div class="navbar" >
+
+        <div class="actions">
+            <button id="checkout-btn">CheckOut</button>
+            <button id="cancel-btn">Cancel</button>
+            <button id="exit-btn">Exit</button>
+            <button id="logout-btn">Logout</button>
+            <button id="about-us-btn" onclick="location.href='about.html'">About Us</button>
+        </div>
+        
+    </div>
+<!-- Products -->
+    <div class="products-grid" style="padding-top: 40px;">
         <div class="product-card">
-            <img src="media/product1.jpg" alt="Product 1">
+            <img src="media/wedding.jpg" alt="Product 1">
             <h3>Wedding Photography</h3>
             <p>Pictures for your Wedding</p>
             <p>Price: $70</p>
             <input type="number" id="product1-qty" min="0" placeholder="Quantity">
         </div>
         <div class="product-card">
-            <img src="media/product2.jpg" alt="Product 2">
+            <img src="media/party.jpeg" alt="Product 2">
             <h3>Party Photography</h3>
             <p>Pictures of your parties and events</p>
             <p>Price: $90</p>
             <input type="number" id="product2-qty" min="0" placeholder="Quantity">
         </div>
         <div class="product-card">
-            <img src="media/product3.jpg" alt="Product 3">
+            <img src="media/date.jpeg" alt="Product 3">
             <h3>Date Photography</h3>
             <p>Pictures of you and your special person on a date</p>
             <p>Price: $60</p>
             <input type="number" id="product3-qty" min="0" placeholder="Quantity">
         </div>
         <div class="product-card">
-            <img src="media/product4.jpg" alt="Product 4">
+            <img src="media/proposal.jpeg" alt="Product 4">
             <h3>Proposal Photography</h3>
             <p>Pictures asking your special person the special question</p>
             <p>Price: $40</p>
             <input type="number" id="product4-qty" min="0" placeholder="Quantity">
         </div>
         <div class="product-card">
-            <img src="media/product5.jpg" alt="Product 5">
+            <img src="media/headshot.jpeg" alt="Product 5">
             <h3>Headshots</h3>
             <p>Still portraits of yourself</p>
             <p>Price: $20</p>
             <input type="number" id="product5-qty" min="0" placeholder="Quantity">
         </div>
+
+    <div class="products-grid">
+  
+        <div class="product-card">
+            <img src="media/graduation.jpeg" alt="Product 6">
+            <h3>Graduation Photography</h3>
+            <p>Capture your special graduation day</p>
+            <p>Price: $100</p>
+            <input type="number" id="product6-qty" min="0" placeholder="Quantity">
+        </div>
+        <div class="product-card">
+            <img src="media/corporate.jpeg" alt="Product 7">
+            <h3>Corporate Event Photography</h3>
+            <p>Professional coverage of corporate events</p>
+            <p>Price: $150</p>
+            <input type="number" id="product7-qty" min="0" placeholder="Quantity">
+        </div>
+        <div class="product-card">
+            <img src="media/family.jpeg" alt="Product 8">
+            <h3>Family Portraits</h3>
+            <p>Beautiful family photographs</p>
+            <p>Price: $80</p>
+            <input type="number" id="product8-qty" min="0" placeholder="Quantity">
+        </div>
+        <div class="product-card">
+            <img src="media/newborn.jpeg" alt="Product 9">
+            <h3>Newborn Photography</h3>
+            <p>Capturing your newborn's precious moments</p>
+            <p>Price: $120</p>
+            <input type="number" id="product9-qty" min="0" placeholder="Quantity">
+        </div>
+        <div class="product-card">
+            <img src="media/landscape.jpeg" alt="Product 10">
+            <h3>Landscape Photography</h3>
+            <p>Stunning landscape images</p>
+            <p>Price: $50</p>
+            <input type="number" id="product10-qty" min="0" placeholder="Quantity">
+        </div>
     </div>
 
-    <div class="actions">
-        <button id="checkout-btn">CheckOut</button>
-        <button id="cancel-btn">Cancel</button>
-        <button id="exit-btn">Exit</button>
-        <button id="logout-btn">Logout</button> <!-- Added Logout Button -->
-        <button id="about-us-btn" onclick="location.href='about.html'">About Us</button> <!-- Added About Us Button -->
-    </div>
-    
+  
     <script src="products.js"></script>
 </body>
 </html>

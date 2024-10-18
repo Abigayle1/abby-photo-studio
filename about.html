@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar Section -->
-    <div class="navbar">
-        <h1>About Us</h1>
+    <div class="title" style="padding-bottom: 20px;">
+        <h1 >About Us</h1>
+        </div>
+        
+    </div>
+    <div class="navbar" >
+
+        <div class="actions">
+            <button id="back-btn" onclick="history.back()">Back</button>
+            <button id="about-us-btn" onclick="location.href='about.html'">About Us</button>
+        </div>
+        
     </div>
 
-    <!-- About Us Section with Flexbox -->
+
     <div class="about-container">
         <img src="media/abigayle.png" alt="Abigayle" class="about-image">
         
@@ -27,9 +36,7 @@
     </div>
 
     <div class="actions">
-        <button id="back-btn" onclick="history.back()">Back</button> <!-- Button to go back -->
     </div>
 
-    <script src="about.js"></script>
 </body>
 </html>

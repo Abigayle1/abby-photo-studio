@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="invoice-styles.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="title" style="padding-bottom: 20px;">
+        <h1 >Invoice</h1>
+        </div>
+        
+    </div>
+    <div class="navbar" >
+
+        <div class="actions">
+            <button id="checkout-btn">CheckOut</button>
+            <button id="logout-btn">Logout</button>
+            <a href="about.html"><button id="about-us-btn" >About Us</button></a>
+        </div>
+        
+    </div>
+
+    <!-- Invoice Container  -->
     <div class="invoice-container">
         <h1>Invoice</h1>
         <p>Date: <span id="invoice-date"></span></p>
+        <!-- Table -->
         <table id="invoice-table">
             <thead>
                 <tr>
@@ -20,15 +38,15 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Dynamic rows will be added here -->
             </tbody>
+            <!-- Collect from javascript and present -->
         </table>
         <p>Subtotal: $<span id="subtotal"></span></p>
         <p>Tax (15%): $<span id="tax"></span></p>
         <p>Discount (10%): -$<span id="discount"></span></p>
         <p>Total: $<span id="total"></span></p>
 
-        <div class="actions">
+        <div class="invoice-actions">
             <button id="cancel-btn">Cancel</button>
             <button id="exit-btn">Exit</button>
         </div>

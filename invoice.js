@@ -1,17 +1,10 @@
-const products = [
-    { name: 'Product 1', price: 50, quantity: 2 },
-    { name: 'Product 2', price: 30, quantity: 1 },
-    // Include other selected products
-];
-
-const taxRate = 0.15;
-const discountRate = 0.1;
-
 // Function to load the invoice
 function loadInvoice() {
+    // Get products from storage
+    const products = JSON.parse(localStorage.getItem('products')) || [];
     const invoiceTableBody = document.querySelector('#invoice-table tbody');
     let subtotal = 0;
-
+// Calculations
     products.forEach(product => {
         const productTotal = product.price * product.quantity;
         subtotal += productTotal;
@@ -26,6 +19,8 @@ function loadInvoice() {
         invoiceTableBody.appendChild(row);
     });
 
+    const taxRate = 0.15;
+    const discountRate = 0.1;
     const tax = subtotal * taxRate;
     const discount = subtotal * discountRate;
     const total = subtotal + tax - discount;
@@ -40,7 +35,7 @@ function loadInvoice() {
     document.getElementById('invoice-date').textContent = today.toDateString();
 }
 
-// Cancel and Exit functionality
+// Cancel and Exit 
 document.getElementById('cancel-btn').addEventListener('click', () => {
     window.location.href = 'products.html'; // Redirect back to product selection
 });
