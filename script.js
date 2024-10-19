@@ -1,6 +1,6 @@
 // sample username and password
-const storedUsername = 'testUser';
-const storedPassword = 'testPass123';
+const storedUsername = 'Abigayle';
+const storedPassword = 'TheBest163';
 
 let loginAttempts = 0;
 
